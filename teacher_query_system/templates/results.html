@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load static %}
+<h2>查询结果</h2>
+{% for teacher in teachers %}
+<div>
+    <img src="{{ teacher.photo.url }}" alt="{{ teacher.name }}" style="width: 300px;">
+    <p>姓名：{{ teacher.name }}</p>
+    <p>系：{{ teacher.department }}</p>
+    <p>职称：{{ teacher.title }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
